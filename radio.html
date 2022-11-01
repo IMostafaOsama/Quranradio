@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إذاعة القرآن الكريم من القاهرة</title>
+    <link rel="stylesheet" href="radio.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio
+      id="audio"
+      src="http://n01.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&amp;rj-tok=AAABhDKbJXAAPXllHquRFi0s8Q"
+    ></audio>
+    <div class="circle">
+      <div class="main">
+        <div class="radio-title">إذاعة القرآن الكريم</div>
+        <div id="radiostream" class="radiostream">
+          <div class="clock">
+            <div id="stopwatchhours">00</div>
+          </div>
+          <div>:</div>
+          <div>
+            <div id="stopwatchminuts">00</div>
+          </div>
+          <div>:</div>
+          <div>
+            <div id="stopwatchseconds">00</div>
+          </div>
+        </div>
+        <div class="btns">
+          <button id="startbtn" class="start" onclick="start()">تشغيل</button>
+          <button id="stopbtn" class="stop" onclick="stop()">إيقاف</button>
+        </div>
+      </div>
+    </div>
+    <script src="time.js"></script>
+    <img class="cairo" src="pics/cairo.png" alt="cairo" />
+  </body>
+</html>
