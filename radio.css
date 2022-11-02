@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Tajawal", sans-serif;
-  color: white;
 }
 body {
   display: flex;
@@ -15,7 +14,26 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: white;
   background-color: black;
+  transition: 0.3s;
+}
+.greatingmsg {
+  position: absolute;
+  top: 10vh;
+  animation: text 2s;
+}
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    top: 11vh;
+  }
+  100% {
+    opacity: 100%;
+    top: 10vh;
+  }
 }
 .circle {
   display: flex;
