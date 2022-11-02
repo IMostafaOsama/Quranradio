@@ -46,7 +46,7 @@ body {
   gap: 50px;
   font-size: 6vh;
 }
-img {
+.cairo {
   position: absolute;
   bottom: 0;
   width: 63vh;
@@ -54,6 +54,43 @@ img {
   object-fit: cover;
   object-position: 50% 50%;
   filter: brightness(500%);
+}
+.birds {
+  position: absolute;
+  bottom: 7vh;
+  width: 5vh;
+  opacity: 0;
+  object-fit: fill;
+  filter: brightness(5000%);
+  animation: flying 200s;
+}
+@keyframes flying {
+  0% {
+    opacity: 0;
+    left: 80vh;
+    bottom: 5vh;
+  }
+  2% {
+    opacity: 100%;
+  }
+  15% {
+    bottom: 7vh;
+  }
+  50% {
+    bottom: 5vh;
+    left: 20vh;
+  }
+  65% {
+    bottom: 7vh;
+  }
+  98% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 5vh;
+    left: 80vh;
+  }
 }
 .start {
   display: inline-block;
@@ -92,8 +129,30 @@ audio {
   .circle {
     transform: scale(55%);
   }
-  img {
+  .cairo {
     transform: scale(130%);
     bottom: -58vh;
+  }
+  .birds {
+    bottom: -50vh;
+  }
+  @keyframes flying {
+    0% {
+      opacity: 0%;
+      left: 70vh;
+    }
+    2% {
+      opacity: 100%;
+    }
+    50% {
+      left: 10vh;
+    }
+    98% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0;
+      left: 70vh;
+    }
   }
 }
