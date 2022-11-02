@@ -19,5 +19,15 @@ setInterval(() => {
     btns.color = "white";
     birds.filter = "brightness(0%)";
     cairo.filter = "brightness(0%)";
+  } else {
+    greatingmsg.innerHTML = "مساء الخير";
+    greatingmsg.style.color = "white";
+    body.backgroundColor = "black";
+    body.color = "white";
+    main.borderColor = "white";
+    btns.backgroundColor = "white";
+    btns.color = "black";
+    birds.filter = "brightness(500%)";
+    cairo.filter = "brightness(500%)";
   }
 }, 1000);
