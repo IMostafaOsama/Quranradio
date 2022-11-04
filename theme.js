@@ -1,3 +1,11 @@
+let startbtn = document.getElementById("startbtn");
+let stopbtn = document.getElementById("stopbtn");
+const audio = document.getElementById("audio");
+const audio2 = document.getElementById("audio2");
+const audio4 = document.getElementById("audio4");
+const audio5 = document.getElementById("audio5");
+const staions = document.querySelector(".staions");
+const stars2 = document.querySelector(".stars2").style;
 const body = document.querySelector("body").style;
 const main = document.querySelector(".main").style;
 const radiostream = document.querySelector(".radiostream").style;
@@ -9,7 +17,6 @@ const marocco = document.querySelector(".marocco").style;
 const emarat = document.querySelector(".emarat").style;
 const stars = document.querySelector(".stars").style;
 const waves = document.querySelector(".waves").style;
-
 const greatingmsg = document.querySelector(".greatingmsg");
 
 setInterval(() => {
@@ -31,6 +38,7 @@ setInterval(() => {
     waves.filter = "brightness(0%)";
     birds.display = "block";
     stars.display = "none";
+    stars2.display = "none";
   } else {
     greatingmsg.innerHTML = "مساء الخير";
     greatingmsg.style.color = "white";
@@ -47,5 +55,6 @@ setInterval(() => {
     waves.filter = "brightness(500%)";
     birds.display = "none";
     stars.display = "block";
+    stars2.display = "block";
   }
 }, 1000);
