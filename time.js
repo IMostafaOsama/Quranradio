@@ -1,6 +1,10 @@
 let startbtn = document.getElementById("startbtn");
 let stopbtn = document.getElementById("stopbtn");
 const audio = document.getElementById("audio");
+const audio2 = document.getElementById("audio2");
+const audio4 = document.getElementById("audio4");
+const audio5 = document.getElementById("audio5");
+const staions = document.querySelector(".staions");
 
 let hour = 00;
 let minute = 00;
@@ -9,19 +13,59 @@ let second = 00;
 function start() {
   timer = true;
   stopWatch();
-  audio.play();
-
+  if (staions.value == "cairostation") {
+    audio.play();
+    audio2.pause();
+    audio4.pause();
+    audio5.pause();
+    document.querySelector(".cairo").style.display = "block";
+    document.querySelector(".saudi").style.display = "none";
+    document.querySelector(".marocco").style.display = "none";
+    document.querySelector(".emarat").style.display = "none";
+  } else if (staions.value == "saudistation") {
+    audio.pause();
+    audio2.play();
+    audio4.pause();
+    audio5.pause();
+    document.querySelector(".cairo").style.display = "none";
+    document.querySelector(".saudi").style.display = "block";
+    document.querySelector(".marocco").style.display = "none";
+    document.querySelector(".emarat").style.display = "none";
+  } else if (staions.value == "maroccostation") {
+    audio.pause();
+    audio2.pause();
+    audio4.play();
+    audio5.pause();
+    document.querySelector(".cairo").style.display = "none";
+    document.querySelector(".saudi").style.display = "none";
+    document.querySelector(".marocco").style.display = "block";
+    document.querySelector(".emarat").style.display = "none";
+  } else if (staions.value == "emaratstation") {
+    audio.pause();
+    audio2.pause();
+    audio4.pause();
+    audio5.play();
+    document.querySelector(".cairo").style.display = "none";
+    document.querySelector(".saudi").style.display = "none";
+    document.querySelector(".marocco").style.display = "none";
+    document.querySelector(".emarat").style.display = "block";
+  }
   document.querySelector(".start").style.display = "none";
   document.querySelector(".stop").style.display = "inline-block";
+  document.querySelector(".waves").style.display = "inline-block";
 }
 
 function stop() {
   timer = false;
 
   audio.pause();
+  audio2.pause();
+  audio4.pause();
+  audio5.pause();
 
   document.querySelector(".stop").style.display = "none";
   document.querySelector(".start").style.display = "inline-block";
+  document.querySelector(".waves").style.display = "none";
 }
 
 function stopWatch() {
