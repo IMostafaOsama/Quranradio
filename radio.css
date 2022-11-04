@@ -5,6 +5,15 @@
   font-family: "Tajawal", sans-serif;
   transform: scale(99%);
 }
+.stars2 {
+  position: absolute;
+  bottom: -30vh;
+  width: 200px;
+  opacity: 0;
+  transform: rotate(60deg);
+  transition: opacity 1s;
+  z-index: -1;
+}
 body {
   display: flex;
   flex-direction: column;
