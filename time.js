@@ -10,6 +10,58 @@ let hour = 00;
 let minute = 00;
 let second = 00;
 
+function selectstasion() {
+  if (
+    staions.value == "cairostation" &&
+    document.querySelector(".stop").style.display == "inline-block"
+  ) {
+    audio.play();
+    audio2.pause();
+    audio4.pause();
+    audio5.pause();
+    document.querySelector(".cairo").style.display = "block";
+    document.querySelector(".saudi").style.display = "none";
+    document.querySelector(".marocco").style.display = "none";
+    document.querySelector(".emarat").style.display = "none";
+  } else if (
+    staions.value == "saudistation" &&
+    document.querySelector(".stop").style.display == "inline-block"
+  ) {
+    audio.pause();
+    audio2.play();
+    audio4.pause();
+    audio5.pause();
+    document.querySelector(".cairo").style.display = "none";
+    document.querySelector(".saudi").style.display = "block";
+    document.querySelector(".marocco").style.display = "none";
+    document.querySelector(".emarat").style.display = "none";
+  } else if (
+    staions.value == "maroccostation" &&
+    document.querySelector(".stop").style.display == "inline-block"
+  ) {
+    audio.pause();
+    audio2.pause();
+    audio4.play();
+    audio5.pause();
+    document.querySelector(".cairo").style.display = "none";
+    document.querySelector(".saudi").style.display = "none";
+    document.querySelector(".marocco").style.display = "block";
+    document.querySelector(".emarat").style.display = "none";
+  } else if (
+    staions.value == "emaratstation" &&
+    document.querySelector(".stop").style.display == "inline-block"
+  ) {
+    audio.pause();
+    audio2.pause();
+    audio4.pause();
+    audio5.play();
+    document.querySelector(".cairo").style.display = "none";
+    document.querySelector(".saudi").style.display = "none";
+    document.querySelector(".marocco").style.display = "none";
+    document.querySelector(".emarat").style.display = "block";
+  }
+}
+
 function start() {
   timer = true;
   stopWatch();
